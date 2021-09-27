@@ -79,8 +79,14 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 | BOARD_InitARDUINO_UART | K10 | LPUART3    | RX          | LPUART3_RX         | default                                             | Arduino UNO R3 pin D0 (GPIO_AD_B1_07)
 | BOARD_InitUSER_LED     | F14 | GPIO1      | gpio_io, 09 | USER_LED           | Direction Output, GPIO initial state 1, mode PullUp | User LED (GPIO_AD_B0_09)
 | BOARD_InitUSER_BUTTON  | L6  | GPIO5      | gpio_io, 00 | USER_BUTTON        | Direction Input, mode PullUp                        | User Button SW8 (WAKEUP)
-| BOARD_InitI2C          | J11 | LPI2C1     | SCL         | I2C_SCL_FXOS8700CQ | Software Input On, Open drain                       | LPI2C1 for FXOS8700CQ (GPIO_AD_B1_00)
-| BOARD_InitI2C          | K11 | LPI2C1     | SDA         | I2C_SDA_FXOS8700CQ | Software Input On, Open drain                       | LPI2C1 for FXOS8700CQ (GPIO_AD_B1_01)
+| BOARD_InitAudio        |H13  |GPIO1       | gpio_io, 24 | CSI_D9             | Direction Input, Rising Edge, mode PullUp           | AUD_INT for Audio (GPIO_AD_B1_08)
+| BOARD_InitAudio        |M13  |SAI1        | MCLK        | CSI_D8             | Software Input On                                   | SAI1_MCLK for Audio (GPIO_AD_B1_09)
+| BOARD_InitAudio        |J11  |LPI2C1      | SCL         | Not Specified      | Software Input On, Open drain                       | LPI2C1 for WM8960 (GPIO_AD_B1_00)
+| BOARD_InitAudio        |K11  |LPI2C1      | SDA         | Not Specified      | Software Input On, Open drain                       | LPI2C1 for WM8960 (GPIO_AD_B1_01)
+| BOARD_InitAudio        |H12  |SAI1        | RX_DATA, 0  | CSI_D5             | default                                             | SAI1_RXD for Audio (GPIO_AD_B1_12)
+| BOARD_InitAudio        |H11  |SAI1        | TX_DATA, 0  | CSI_D4             | default                                             | SAI1_TXD for Audio (GPIO_AD_B1_13)
+| BOARD_InitAudio        |G12  |SAI1        | TX_BCLK     | CSI_D3             | default                                             | SAI1_TX_BCLK for Audio (GPIO_AD_B1_14)
+| BOARD_InitAudio        |J14  |SAI1        | TX_SYNC     | CSI_D2             | default                                             | SAI1_TX_SYNC for Audio (GPIO_AD_B1_15)
 
 ### NVIC Configuration
 
@@ -105,5 +111,3 @@ The example project can be re-configured to work on custom hardware. Refer to ["
 |:------------------|:-----------------------
 | vioBUTTON0        | User Button SW8 (WAKEUP)
 | vioLED0           | User LED (GPIO_AD_B0_09)
-| vioMotionAccelero | 3-Axis Accelerometer (FXOS8700CQ)
-| vioMotionMagneto  | 3-Axis Magnetometer (FXOS8700CQ)
