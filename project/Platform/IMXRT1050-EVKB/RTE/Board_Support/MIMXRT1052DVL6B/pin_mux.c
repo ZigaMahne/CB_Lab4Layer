@@ -227,7 +227,7 @@ void BOARD_InitBootPins(void) {
     BOARD_InitARDUINO_UART();
     BOARD_InitUSER_LED();
     BOARD_InitUSER_BUTTON();
-    BOARD_InitI2C();
+    BOARD_InitAudio();
 }
 
 /*
@@ -764,7 +764,7 @@ void BOARD_InitUSER_BUTTON(void) {
 /*
  * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 BOARD_InitI2C:
-- options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
+- options: {callFromInitBoot: 'false', coreID: core0, enableClock: 'true'}
 - pin_list:
   - {pin_num: J11, peripheral: LPI2C1, signal: SCL, pin_signal: GPIO_AD_B1_00, identifier: I2C_SCL_FXOS8700CQ, software_input_on: Enable, open_drain: Enable}
   - {pin_num: K11, peripheral: LPI2C1, signal: SDA, pin_signal: GPIO_AD_B1_01, identifier: I2C_SDA_FXOS8700CQ, software_input_on: Enable, open_drain: Enable}
@@ -784,6 +784,56 @@ void BOARD_InitI2C(void) {
   IOMUXC_SetPinMux(IOMUXC_GPIO_AD_B1_01_LPI2C1_SDA, 1U); 
   IOMUXC_SetPinConfig(IOMUXC_GPIO_AD_B1_00_LPI2C1_SCL, 0x18B0U); 
   IOMUXC_SetPinConfig(IOMUXC_GPIO_AD_B1_01_LPI2C1_SDA, 0x18B0U); 
+}
+
+
+/*
+ * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+BOARD_InitAudio:
+- options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
+- pin_list:
+  - {pin_num: H13, peripheral: GPIO1, signal: 'gpio_io, 24', pin_signal: GPIO_AD_B1_08, direction: INPUT, gpio_interrupt: kGPIO_IntRisingEdge, pull_up_down_config: Pull_Up_47K_Ohm}
+  - {pin_num: M13, peripheral: SAI1, signal: sai_mclk, pin_signal: GPIO_AD_B1_09, software_input_on: Enable}
+  - {pin_num: J11, peripheral: LPI2C1, signal: SCL, pin_signal: GPIO_AD_B1_00, software_input_on: Enable, pull_up_down_config: Pull_Up_22K_Ohm, open_drain: Enable}
+  - {pin_num: K11, peripheral: LPI2C1, signal: SDA, pin_signal: GPIO_AD_B1_01, software_input_on: Enable, pull_up_down_config: Pull_Up_22K_Ohm, open_drain: Enable}
+  - {pin_num: H12, peripheral: SAI1, signal: sai_rx_data0, pin_signal: GPIO_AD_B1_12, software_input_on: Enable}
+  - {pin_num: H11, peripheral: SAI1, signal: sai_tx_data0, pin_signal: GPIO_AD_B1_13, software_input_on: Enable}
+  - {pin_num: G12, peripheral: SAI1, signal: sai_tx_bclk, pin_signal: GPIO_AD_B1_14, software_input_on: Enable}
+  - {pin_num: J14, peripheral: SAI1, signal: sai_tx_sync, pin_signal: GPIO_AD_B1_15, software_input_on: Enable}
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
+ */
+
+/* FUNCTION ************************************************************************************************************
+ *
+ * Function Name : BOARD_InitAudio
+ * Description   : Configures pin routing and optionally pin electrical features.
+ *
+ * END ****************************************************************************************************************/
+void BOARD_InitAudio(void) {
+  CLOCK_EnableClock(kCLOCK_Iomuxc);           
+
+  /* GPIO configuration of CSI_D9 on GPIO_AD_B1_08 (pin H13) */
+  gpio_pin_config_t CSI_D9_config = {
+      .direction = kGPIO_DigitalInput,
+      .outputLogic = 0U,
+      .interruptMode = kGPIO_IntRisingEdge
+  };
+  /* Initialize GPIO functionality on GPIO_AD_B1_08 (pin H13) */
+  GPIO_PinInit(GPIO1, 24U, &CSI_D9_config);
+  /* Enable GPIO pin interrupt on GPIO_AD_B1_08 (pin H13) */
+  GPIO_PortEnableInterrupts(GPIO1, 1U << 24U);
+
+  IOMUXC_SetPinMux(IOMUXC_GPIO_AD_B1_00_LPI2C1_SCL, 1U); 
+  IOMUXC_SetPinMux(IOMUXC_GPIO_AD_B1_01_LPI2C1_SDA, 1U); 
+  IOMUXC_SetPinMux(IOMUXC_GPIO_AD_B1_08_GPIO1_IO24, 0U); 
+  IOMUXC_SetPinMux(IOMUXC_GPIO_AD_B1_09_SAI1_MCLK, 1U); 
+  IOMUXC_SetPinMux(IOMUXC_GPIO_AD_B1_12_SAI1_RX_DATA00, 1U); 
+  IOMUXC_SetPinMux(IOMUXC_GPIO_AD_B1_13_SAI1_TX_DATA00, 1U); 
+  IOMUXC_SetPinMux(IOMUXC_GPIO_AD_B1_14_SAI1_TX_BCLK, 1U); 
+  IOMUXC_SetPinMux(IOMUXC_GPIO_AD_B1_15_SAI1_TX_SYNC, 1U); 
+  IOMUXC_SetPinConfig(IOMUXC_GPIO_AD_B1_00_LPI2C1_SCL, 0xD8B0U); 
+  IOMUXC_SetPinConfig(IOMUXC_GPIO_AD_B1_01_LPI2C1_SDA, 0xD8B0U); 
+  IOMUXC_SetPinConfig(IOMUXC_GPIO_AD_B1_08_GPIO1_IO24, 0x50B0U); 
 }
 
 /***********************************************************************************************************************
