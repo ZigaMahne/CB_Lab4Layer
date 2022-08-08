@@ -82,16 +82,12 @@
     <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Common" Cvendor="Keil" layer="Board"/>
     <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Cortex" Cvendor="Keil" layer="Board"/>
     <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="DMA" Cvendor="Keil" layer="Board"/>
-    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="DMA2D" Cvendor="Keil" layer="Board"/>
     <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="ETH" Cvendor="Keil" layer="Board"/>
     <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="EXTI" Cvendor="Keil" layer="Board"/>
     <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="GPIO" Cvendor="Keil" layer="Board"/>
     <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="I2C" Cvendor="Keil" layer="Board"/>
     <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="IRDA" Cvendor="Keil" layer="Board"/>
-    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="LTDC" Cvendor="Keil" layer="Board"/>
-    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="MDMA" Cvendor="Keil" layer="Board"/>
     <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="MMC" Cvendor="Keil" layer="Board"/>
-    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="OSPI" Cvendor="Keil" layer="Board"/>
     <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="PWR" Cvendor="Keil" layer="Board"/>
     <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RCC" Cvendor="Keil" layer="Board"/>
     <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="SD" Cvendor="Keil" layer="Board"/>
