@@ -16,7 +16,7 @@
         <TargetCommonOption>
           <Device>STM32F746NGHx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F7xx_DFP.2.15.0</PackID>
+          <PackID>Keil.STM32F7xx_DFP.2.15.1</PackID>
           <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IROM(0x08000000,0x100000) IROM2(0x00200000,0x100000) IRAM(0x20010000,0x40000) IRAM2(0x20000000,0x10000) CPUTYPE("Cortex-M7") FPU3(SFPU) CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -338,7 +338,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>EMAC_DCACHE_MAINTENANCE=0, MCI_DCACHE_MAINTENANCE=0</Define>
               <Undefine></Undefine>
               <IncludePath>.\Board_IO</IncludePath>
             </VariousControls>
@@ -579,13 +579,13 @@
         </targetInfos>
       </component>
       <component Cbundle="STM32F746G-Discovery" Cclass="Board Support" Cgroup="Drivers" Csub="Basic I/O" Cvendor="Keil" Cversion="1.1.1" condition="STM32F746G-Discovery BSP">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Capiversion="2.1.0" Cclass="CMSIS Driver" Cgroup="Ethernet MAC" Cvendor="Keil" Cversion="1.12.0" condition="STM32F7 CMSIS_Driver ETH_MAC">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery">
             <c>
@@ -601,133 +601,133 @@
         </targetInfos>
       </component>
       <component Capiversion="2.2.0" Cclass="CMSIS Driver" Cgroup="MCI" Cvendor="Keil" Cversion="1.13.0" condition="STM32F7 CMSIS_Driver MCI">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Capiversion="2.1.0" Cclass="CMSIS Driver" Cgroup="SPI" Cvendor="Keil" Cversion="1.14.0" condition="STM32F7 CMSIS_Driver SPI">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Capiversion="2.1.0" Cclass="CMSIS Driver" Cgroup="USART" Cvendor="Keil" Cversion="1.19.0" condition="STM32F7 CMSIS_Driver USART">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Capiversion="0.1.0" Cclass="CMSIS Driver" Cgroup="VIO" Csub="Board" Cvariant="STM32F746G-Discovery" Cvendor="Keil" Cversion="1.2.0" condition="STM32F746G-Discovery VIO">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Common" Cvendor="Keil" Cversion="1.3.0" condition="STM32F7 HAL Common">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Cortex" Cvendor="Keil" Cversion="1.3.0" condition="STM32F7 HAL">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="DMA" Cvendor="Keil" Cversion="1.3.0" condition="STM32F7 HAL">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="ETH" Cvendor="Keil" Cversion="1.3.0" condition="STM32F7 HAL">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="GPIO" Cvendor="Keil" Cversion="1.3.0" condition="STM32F7 HAL">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="I2C" Cvendor="Keil" Cversion="1.3.0" condition="STM32F7 HAL DMA">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="MMC" Cvendor="Keil" Cversion="1.3.0" condition="STM32F7 HAL DMA">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="PWR" Cvendor="Keil" Cversion="1.3.0" condition="STM32F7 HAL">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RCC" Cvendor="Keil" Cversion="1.3.0" condition="STM32F7 HAL GPIO">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RNG" Cvendor="Keil" Cversion="1.3.0" condition="STM32F7 HAL">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="SD" Cvendor="Keil" Cversion="1.3.0" condition="STM32F7 HAL DMA">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="SPI" Cvendor="Keil" Cversion="1.3.0" condition="STM32F7 HAL DMA">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="UART" Cvendor="Keil" Cversion="1.3.0" condition="STM32F7 HAL DMA">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube LL" Csub="Common" Cvendor="Keil" Cversion="1.3.0" condition="STM32F7 LL Common">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube LL" Csub="PWR" Cvendor="Keil" Cversion="1.3.0" condition="STM32F7 LL">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube LL" Csub="RCC" Cvendor="Keil" Cversion="1.3.0" condition="STM32F7 LL">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube LL" Csub="UTILS" Cvendor="Keil" Cversion="1.3.0" condition="STM32F7">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.2.5" condition="STM32F7 CMSIS">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
@@ -761,7 +761,7 @@
       <file attr="config" category="source" condition="STM32F746_ARMCC" name="Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\arm\startup_stm32f746xx.s" version="1.3.0">
         <instance index="0">RTE\Device\STM32F746NGHx\startup_stm32f746xx.s</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.2.5" condition="STM32F7 CMSIS"/>
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>
@@ -769,7 +769,7 @@
       <file attr="config" category="source" name="Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\system_stm32f7xx.c" version="1.3.0">
         <instance index="0">RTE\Device\STM32F746NGHx\system_stm32f7xx.c</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.2.5" condition="STM32F7 CMSIS"/>
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+        <package name="STM32F7xx_DFP" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="Keil" version="2.15.1"/>
         <targetInfos>
           <targetInfo name="STM32F746G-Discovery"/>
         </targetInfos>

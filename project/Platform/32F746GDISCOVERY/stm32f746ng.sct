@@ -14,7 +14,7 @@ LR_IROM1 0x08000000 0x00100000  {    ; load region (1 MB)
     * (STACK)                        ; Stack
   }
   RW_DTCM_NOINIT 0x2000F800 UNINIT 0x00000800 { ; 2 kB
-    EventRecorder.o (+ZI)                       ; EventRecorder data
+    *(.bss.noinit)                              ; EventRecorder data
   }
   RW_SRAM1 0x20010000 0x00003C000 {  ; 240 kB
     * (HEAP)                         ; Heap
